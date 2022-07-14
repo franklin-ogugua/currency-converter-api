@@ -1,4 +1,4 @@
-# Currency converter API built with FastApi, JWT Token-based Authentication and Docker
+# Currency converter API built with FastApi and Docker
 
 ## Want to use this project?
 
