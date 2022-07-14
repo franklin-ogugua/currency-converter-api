@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    build: ./perusable
+    command: uvicorn converter.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    volumes:
+      - ./perusable:/usr/src/app
+    ports:
+      - 8004:8000
+    environment:
+      - ENVIRONMENT=dev
+      - TESTING=0
+      - secret=deff1952d59f883ece260e8683fed21ab0ad9a53323eca4f
+      - algorithm=HS256
+      - APIKEY=459c931be884244aae321d3a
